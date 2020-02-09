@@ -9,7 +9,7 @@ class BasicTypesTest{
         var nullableInt: Int? = null
 
         /// Begin
-        nullableInt = 2
+        nullableInt = 1
         ///
 
         assertEquals(1, nullableInt)
