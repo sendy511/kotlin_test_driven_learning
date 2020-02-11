@@ -21,4 +21,16 @@ class StringTest{
         val message = "Hello ${getMyName()}"
         assertEquals("Hello Yansen", message)
     }
+
+    @Test
+    fun verify_no_escape_string(){
+        assertEquals("Hello \\\\", """Hello \\""")
+    }
+
+    @Test
+    fun verify_new_split_function(){
+        val str = "1.2.4-5"
+        val strParts = str.split(".")
+        assertEquals(listOf("1", "2", "4-5"), strParts)
+    }
 }

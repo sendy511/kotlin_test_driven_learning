@@ -16,7 +16,19 @@ class MethodTest{
          val names = arrayListOf("Yansen", "Jason")
 
          assertEquals("(Yansen, Jason)", names.myJoinToString(
-                 seperator = ", ", prefix = "(", postfix = ")"
+                 separator = ", ", prefix = "(", postfix = ")"
          ))
+     }
+
+     @Test
+     fun test_vararguments_method(){
+         assertEquals("(Yansen, Jason)", namesToString("Yansen", "Jason"))
+     }
+
+     @Test
+     fun verify_mid_fix_invoking(){
+        val myInt = MyInt(1)
+
+         assertEquals(Pair(1, 2), myInt myTo 2)
      }
 }
